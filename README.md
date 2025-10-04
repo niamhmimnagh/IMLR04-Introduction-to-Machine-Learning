@@ -1,25 +1,23 @@
 # IMLR04-Introduction-to-Machine-Learning
+
+This repository contains all materials for the Introduction to Machine Learning course. It includes datasets, example scripts, and lecture slides used throughout the sessions.
+
+---
+
+ 📂 Repository Structure
+
+```text
+IMLR04---Introduction-to-Machine-Learning/
 │
-├── data/                  # Datasets used in the course
-│   ├── iris.csv                     # Multi-class classification example
-│   ├── german_credit.csv            # Binary classification and imbalance example
-│   ├── wine_quality.csv             # Regression and classification example
-│   └── ... other datasets ...
-│
-├── scripts/               # R code for demos and analysis
-│   ├── data_preprocessing.R        # Handling missing data, scaling, encoding
-│   ├── classification_models.R     # Logistic regression, trees, k-NN, Naïve Bayes
-│   ├── regression_models.R         # Linear, ridge, lasso, and tree-based regression
-│   ├── clustering_models.R         # K-means, hierarchical clustering
-│   ├── model_evaluation.R          # Cross-validation, metrics, confusion matrices
+├── scripts/               # R code for demos and data creation
+│   ├── simulate_data.R            # Reproducible code to generate datasets
+│   ├── coding_demo.R              # Coding demonstrations shown in lectures
 │   └── ... additional scripts ...
 │
-├── slides/                # PDF files of lecture slides
-│   ├── Intro to ML 1
-│   ├── Intro to ML 2
-│   ├── Intro to ML 3
-│   ├── Intro to ML 4
-│   ├── Intro to ML 5
-│   └── ... additional slides ...
+├── slides.pdf             # PDF of the lecture slides
+│   ├── intro to ML 1            
+│   ├── intro to ML 2          
+│   └── ... additional scripts ...
 │
 └── README.md              # This file
+```
