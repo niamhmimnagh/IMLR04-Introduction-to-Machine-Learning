@@ -161,15 +161,16 @@ pred_log <- predict(fit_enet, new_data = test)
 
 # #  back-transform predictions to the original  
 # # to convert from log-price -> price, we use the exp()
-# pred_orig <- pred_log %>%
-#   dplyr::mutate(Sale_price_pred = exp(.pred)) %>%
-#   dplyr::select(Sale_price_pred)
+pred_orig <- pred_log %>%
+   dplyr::mutate(Sale_price_pred = exp(.pred)) %>%
+   dplyr::select(Sale_price_pred)
 # 
 # # combine truth (test$Sale_Price) with the back-transformed predictions
-# test_results <- test %>%
-#   dplyr::select(Sale_Price) %>%
-#   dplyr::bind_cols(pred_orig)
-
+ test_results <- test %>%
+   dplyr::select(Sale_Price) %>%
+   dplyr::bind_cols(pred_orig)
+# In the session this produced strange results, as there was a typo in the workflow - 
+# this now works correctly
 
 # RANDOM FOREST
 # we have our data split into training/testing and we have our recipe
@@ -218,6 +219,7 @@ best_rf<-select_best(rf_results, metric="mae")
 # Finalise the workflow and fit the model to the entire training dataset
 final_rf<-finalize_workflow(workflow_rf, best_rf)
 fit_rf<-fit(final_rf, data=train)
+
 
 
 
